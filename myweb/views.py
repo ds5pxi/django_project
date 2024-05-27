@@ -4,8 +4,8 @@ from django.contrib import auth
 from django.contrib.auth.models import User
 from django.contrib.auth.hashers import check_password
 
-def index(request) :
-    return render(request, 'homepage/home.html');
+def index(request):
+    return render(request, 'homepage/home.html')
 
 def login(request) :
     return render(request, 'homepage/registeration/login.html');
@@ -16,7 +16,7 @@ def logout(request) :
 
 def createAccount(request):
     if request.method == 'GET':
-        return render(request, "homepage/registeration/register.html");
+        return render(request, "homepage/registeration/register.html")
     elif request.method == 'POST':
         username = request.POST.get("username");
         password = request.POST.get("password");
@@ -43,7 +43,7 @@ def myinfo(request):
     }
     if user.is_active :
         if request.method == 'GET':
-            return render(request, 'homepage/registration/myinfo.html', content);
+            return render(request, 'hompage/registration/myinfo.html', content);
         else:
             origin = request.POST['origin']
 
