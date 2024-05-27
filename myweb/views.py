@@ -5,16 +5,16 @@ def index(request) :
     return render(request, 'main.html');
 
 def login(request) :
-    return render(request, 'login.html');
+    return render(request, 'registeration/login.html');
 
 def logout(request) :
-    return render(request, 'logout.html');
+    return render(request, 'registeration/logged_out.html');
 
 def createAccount(request):
-    return render(request, 'creaateAccount');
+    return render(request, 'registeration/login.html');
 
 def myinfo(request):
-    return render(request, 'myinfo.html');
+    return render(request, 'registeration/myinfo.html');
 
 def myinfoDel(request):
-    return render(request, 'myinfoDel');
+    return render(request, 'registeration/myinfoDel');
