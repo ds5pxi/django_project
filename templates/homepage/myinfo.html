@@ -48,20 +48,16 @@
             <tr id="changePwd">
             </tr>
             <tr>
+                <th>성 : </th>
+                <td><input type="text" name="first_name" value="{{ userInfo.first_name }}"></td>
+            </tr>
+            <tr>
                 <th>이름 : </th>
-                <td><input type="text" name="name" value="{{ userInfo.name }}"></td>
-            </tr>
-            <tr>
-                <th>전화번호 : </th>
-                <td><input type="text" name="phoneNum" value="{{ userInfo.phoneNum }}"></td>
-            </tr>
-            <tr>
-                <th>생년월일 : </th>
-                <td><input type="date" name="birth" value="{{ userInfo.birth }}"></td>
+                <td><input type="text" name="last_name" value="{{ userInfo.last_name }}"></td>
             </tr>
             <tr>
                 <th>이메일 : </th>
-                <td><input type="email" name="email" value="{{ userInfo.email }}"></td>
+                <td><input type="date" name="birth" value="{{ userInfo.birth }}"></td>
             </tr>
         </table>
         <hr>

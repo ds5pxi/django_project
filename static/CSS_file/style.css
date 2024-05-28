@@ -1,4 +1,3 @@
-
 body {
     margin: 0;
     padding: 0;
@@ -6,7 +5,7 @@ body {
     min-height: 100vh;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(#E10A00, #E10109);
+    background-image: url('https://image.fmkorea.com/files/attach/new3/20231229/2978469841/5358800295/6556893212/8ca97bdf7b5a6a72c955f781e3bd80be.jpg');
 }
 .container {
     display: inline-block;
@@ -44,24 +43,22 @@ form input{
     border: 1px solid rgba(0,0,0,0.4);
     border-radius: 3px;
     outline: none;
+    width: 100%;
+    box-sizing: border-box;
+    height: 35px;
+    font-size: 17px;
 }
 form input:focus{
     border: 1px solid rgba(0,0,0,0.7);
     background: #efefef;
 }
-input[type='text'],input[type="password"]{
-    padding-left: 10px;
-    position: relative;
-    height: 35px;
-    font-size:17px;
-}
 input::placeholder{
     font-weight: normal;
-    font-size:13px;
+    font-size: 13px;
     transition: 0.3s ease;
 }
 input:focus::placeholder{
-    position:absolute;
+    position: absolute;
     font-size: 10px;
     transform: translateY(-13px);
 }
@@ -123,8 +120,4 @@ form .option:after{
     text-decoration: none;
     color: #008a;
     margin-left: 5px;
-}
-img {
-    position: relative;
-    top: 40px;
 }

@@ -22,13 +22,11 @@ def createAccount(request):
     elif request.method == 'POST':
         username = request.POST.get("username");
         password = request.POST.get("password");
-        name = request.POST.get("name");
-        phoneNum = request.POST.get("phoneNum");
-        birth = request.POST.get("birth");
-        email = request.POST.get("email");
-
+        first_name = request.POST.get("first_name")
+        last_name = request.POST.get("last_name")
+        email = request.POST.get("email")
         try:
-            User.objects.create_user(username, password, name, phoneNum, birth, email);
+            User.objects.create_user(username, email, password, first_name=first_name, last_name=last_name);
             return redirect('login');
         except:
             msg = "<script>";
@@ -85,7 +83,19 @@ def myinfo(request):
         return HttpResponse(msg);
 
 def myinfoDel(request):
-    return render(request, 'homepage/myinfoDel.html');
+
+    User.objects.get(username = request.user.username).delete();
+    ans = "confirm('회원정보를 삭제할까요?')";
+
+    msg = "<script>";
+    msg += ans;
+    if ans :
+        msg += "alert('정보를 삭제합니다.')";
+    else :
+        msg += "alert('삭제를 취소하고 이전페이지로 돌아갑니다.')";
+    msg += 'location.href="/";';
+    msg += "</script>";
+    return HttpResponse(msg);
 
 def info(request):
     return render(request, 'template/menu/info.html')
@@ -101,4 +111,10 @@ def weight(request):
 
 def QnA(request):
     return render(request, 'menu/QnA.html')
+
+def runningtip(request):
+    return render(request, 'menu/runningtip.html')
+
+def weighttip(request):
+    return render(request, 'menu/weighttip.html')
 
