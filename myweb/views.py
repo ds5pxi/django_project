@@ -22,13 +22,11 @@ def createAccount(request):
     elif request.method == 'POST':
         username = request.POST.get("username");
         password = request.POST.get("password");
-        name = request.POST.get("name");
-        phoneNum = request.POST.get("phoneNum");
-        birth = request.POST.get("birth");
-        email = request.POST.get("email");
-
+        first_name = request.POST.get("first_name")
+        last_name = request.POST.get("last_name")
+        email = request.POST.get("email")
         try:
-            User.objects.create_user(username, password, name, phoneNum, birth, email);
+            User.objects.create_user(username, email, password, first_name=first_name, last_name=last_name,);
             return redirect('login');
         except:
             msg = "<script>";
