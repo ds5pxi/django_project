@@ -100,3 +100,9 @@ def weight(request):
 def QnA(request):
     return render(request, 'menu/QnA.html')
 
+def runningtip(request):
+    return render(request, 'menu/runningtip.html')
+
+def weighttip(request):
+    return render(request, 'menu/weighttip.html')
+
