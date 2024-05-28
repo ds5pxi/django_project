@@ -27,4 +27,5 @@ urlpatterns = [
     path('account/logout/', views.logout),
     path('account/myinfo/', views.myinfo),
     path('account/myinfoDel/', views.myinfoDel),
+    path('menu/', include('menu1.urls')),
 ]

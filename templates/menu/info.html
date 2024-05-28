@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    {% load static %}
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" 
+    rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'menu1/style.css' %}">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: plum;
+        }
+
+        header {
+            background-color: skyblue;
+            color: white;
+            padding: 40px 0;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        header img {
+            height: 80px;
+            margin: 0 20px;
+        }
+
+        header h1 {
+            margin: 0;
+            flex-grow: 0;
+        }
+
+        .container {
+            padding: 20px;
+        }
+
+        .menu-item {
+            background-color: white;
+            padding: 15px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .menu-item h2 {
+            margin: 0 0 10px;
+        }
+
+        .menu-item p {
+            margin: 0;
+        }
+
+        footer {
+            background-color: skyblue;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="{% static 'menu1/dumbbell.png' %}" alt="Dumbbell" class="icon">
+        <h1>헬스 정보 방</h1>
+        <img src="{% static 'menu1/barbell.png' %}" alt="Barbell" class="icon">
+    </header>
+    <div class="container">
+        <div class="menu-item">
+            <h2><button type='button' class = "btn btn-primary btn-lg"
+                onclick="document.location.href='/menu/running/'">유산소</button>
+            </h2>
+            <p>유산소 운동에 대한 설명.</p>
+        </div>
+        <div class="menu-item">
+            <h2><button type='button' class = "btn btn-danger btn-lg"
+                onclick="document.location.href='/menu/weight/'">무산소</button></h2>
+            <p>무산소 운동에 대한 설명.</p>
+        </div>
+    </div>
+    <footer>
+        &copy; 2024 Health Community
+    </footer>
+</body>
+</html>
