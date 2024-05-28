@@ -10,8 +10,8 @@
         }
 
         function check() {
-            pw1 = f1.password.value;
-            pw2 = f1.passwordchk.value;
+            pw1 = document.getElementById("pw1").value;
+            pw2 = document.getElementById("pw2").value;
 
             if (pw1 == pw2) {
                 alert("암호가 일치 합니다.");
@@ -39,12 +39,12 @@
                 <td><input type="text" name="username"></td>
             </tr>
             <tr>
-                <th>사용자 암호 : </th>
-                <td><input type="password" id="pw1" name="password"></td>
+                <th>암호 : </th>
+                <td><input type="password" id="pw1"></td>
             </tr>
             <tr>
-                <th>사용자 암호 확인 : </th>
-                <td><input type="password" id="pw2" name="passwordchk"></td>
+                <th>암호 확인 : </th>
+                <td><input type="password" id="pw2" onchange="check"></td>
             </tr>
             <tr>
                 <th>이름 : </th>
