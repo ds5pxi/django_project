@@ -30,8 +30,8 @@ def createAccount(request):
             return redirect('login');
         except:
             msg = "<script>";
-            msg += "alert('같은 아이디가 존재합니다. 다시 가입하세요.');";
-            msg += "location.href='/account/register';";
+            msg += "alert('같은 아이디가 존재합니다. 다시 입력하세요.');";
+            msg += "location.href='/account/register/';";
             msg += "</script>";
             return HttpResponse(msg);
 
@@ -52,7 +52,7 @@ def myinfo(request):
                 name = request.POST.get('name');
                 phoneNum = request.POST.get('phoneNum');
                 birth = request.POST.get('birth');
-                email = request.POST.get("email");
+                email = request.POST.get('email');
 
                 if password != None :
                     userInfo.set_password(password)
@@ -66,21 +66,21 @@ def myinfo(request):
                 
                 msg = "<script>";
                 msg += "alert('회원정보 수정이 완료되었습니다. 다시 로그인 하세요.');";
-                msg += "location.href='homepage/login';";
+                msg += "location.href='account/login/';";
                 msg += "</script>";
                 return HttpResponse(msg);
             else:
                 msg = "<script>";
-                msg += "alert('비밀번호가 틀려 회원정보를 수정 할 수 없습니다.');";
-                msg += "location.href='homepage/login';";
+                msg += "alert('비밀번호가 틀렸습니다.');";
+                msg += "location.href='account/login/';";
                 msg += "</script>";
                 return HttpResponse(msg);
     else:
         msg = "<script>";
-        msg += "alert('로그인이 되어 있지 않습니다. 로그인 후 사용하세요.');";
-        msg += "location.href='homepage/login';";
+        msg += "alert('로그인 후 사용하세요.');";
+        msg += "location.href='account/login/';";
         msg += "</script>";
         return HttpResponse(msg);
 
 def myinfoDel(request):
-    return render(request, 'homepage/myinfoDel');
+    return render(request, 'homepage/myinfoDel.html');
