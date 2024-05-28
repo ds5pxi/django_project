@@ -22,7 +22,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     # path('', include('main_page.urls')),
     path("", views.index),
-
     path('account/login/', views.login),
     path('account/logout/', views.logout),
     path('account/register/', views.createAccount),
