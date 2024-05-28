@@ -25,7 +25,7 @@
 
         function pageSubmit() {
             f1.method = "post";
-            f1.action = "/";
+            f1.action = "";
             f1.submit();
         }
     </script>
@@ -40,23 +40,19 @@
             </tr>
             <tr>
                 <th>암호 : </th>
-                <td><input type="password" id="pw1"></td>
+                <td><input type="password" id="pw1" name="password"></td>
             </tr>
             <tr>
                 <th>암호 확인 : </th>
-                <td><input type="password" id="pw2" onchange="check()"></td>
+                <td><input type="password" id="pw2" onchange="check()" name="passwordchk"></td>
+            </tr>
+            <tr>
+                <th>성 : </th>
+                <td><input type="text" name="first_name"></td>
             </tr>
             <tr>
                 <th>이름 : </th>
-                <td><input type="text" name="name"></td>
-            </tr>
-            <tr>
-                <th>전화번호 : </th>
-                <td><input type="text" name="phoneNum"></td>
-            </tr>
-            <tr>
-                <th>생년월일 : </th>
-                <td><input type="date" name="birth"></td>
+                <td><input type="text" name="last_name"></td>
             </tr>
             <tr>
                 <th>이메일 : </th>
