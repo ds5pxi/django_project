@@ -1,18 +1,10 @@
-<<<<<<< HEAD
-from django.shortcuts import render, redirect, HttpResponse
-from django.conf import settings
 # Create your views here.
-def index(request):
-    return render(request, 'template/menu/index.html')
-
-
-    return render(request, 'template/menu/arm.html')
-=======
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, HttpResponse
 from django.http import HttpResponse
 from django.contrib import auth
 from django.contrib.auth.models import User
 from django.contrib.auth.hashers import check_password
+from django.conf import settings
 
 def index(request):
     return render(request, 'home.html')
@@ -21,7 +13,7 @@ def login(request) :
     return render(request, 'homepage/login.html');
 
 def logout(request) :
-    auth.logout(request);
+    auth.logout(request)
     return render(request, 'homepage/logged_out.html');
 
 def createAccount(request):
@@ -94,4 +86,19 @@ def myinfo(request):
 
 def myinfoDel(request):
     return render(request, 'homepage/myinfoDel.html');
->>>>>>> 2bd7fcd493affb054228f38b4632234a9d153bf3
+
+def info(request):
+    return render(request, 'template/menu/info.html')
+
+def template(request):
+    return render(request, 'template/')
+
+def running(request):
+    return render(request, 'menu/running.html')
+
+def weight(request):
+    return render(request, 'menu/weight.html')
+
+def QnA(request):
+    return render(request, 'menu/QnA.html')
+
