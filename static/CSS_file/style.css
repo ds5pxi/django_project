@@ -6,7 +6,7 @@ body {
     min-height: 100vh;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(#E10A00, #E10109);
+    background-image : url('https://image.fmkorea.com/files/attach/new3/20231229/2978469841/5358800295/6556893212/8ca97bdf7b5a6a72c955f781e3bd80be.jpg');
 }
 .container {
     display: inline-block;
@@ -123,8 +123,4 @@ form .option:after{
     text-decoration: none;
     color: #008a;
     margin-left: 5px;
-}
-img {
-    position: relative;
-    top: 40px;
 }
