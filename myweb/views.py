@@ -26,7 +26,7 @@ def createAccount(request):
         last_name = request.POST.get("last_name")
         email = request.POST.get("email")
         try:
-            User.objects.create_user(username, email, password, first_name=first_name, last_name=last_name,);
+            User.objects.create_user(username, email, password, first_name=first_name, last_name=last_name);
             return redirect('login');
         except:
             msg = "<script>";
@@ -83,7 +83,19 @@ def myinfo(request):
         return HttpResponse(msg);
 
 def myinfoDel(request):
-    return render(request, 'homepage/myinfoDel.html');
+
+    User.objects.get(username = request.user.username).delete();
+    ans = "confirm('회원정보를 삭제할까요?')";
+
+    msg = "<script>";
+    msg += ans;
+    if ans :
+        msg += "alert('정보를 삭제합니다.')";
+    else :
+        msg += "alert('삭제를 취소하고 이전페이지로 돌아갑니다.')";
+    msg += 'location.href="/";';
+    msg += "</script>";
+    return HttpResponse(msg);
 
 def info(request):
     return render(request, 'template/menu/info.html')
