@@ -26,7 +26,7 @@ def createAccount(request):
         last_name = request.POST.get("last_name")
         email = request.POST.get("email")
         try:
-            User.objects.create_user(username, email, password, first_name=first_name, last_name=last_name,);
+            User.objects.create_user(username, email, password, first_name=first_name, last_name=last_name);
             return redirect('login');
         except:
             msg = "<script>";

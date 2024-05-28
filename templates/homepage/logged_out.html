@@ -8,6 +8,7 @@
         var ans = confirm("로그아웃 하시겠습니까?");
         if (ans) {
             alert("로그아웃이 완료 되었습니다.");
+            location.href="/";
         } else {
             alert("로그아웃을 취소하고 시작페이지로 돌아갑니다.");
             history.go(-1);
