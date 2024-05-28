@@ -1,8 +1,10 @@
-from django.shortcuts import render, redirect
+
+from django.shortcuts import render, redirect, HttpResponse
 from django.http import HttpResponse
 from django.contrib import auth
 from django.contrib.auth.models import User
 from django.contrib.auth.hashers import check_password
+from django.conf import settings
 
 def index(request):
     return render(request, 'home.html')
@@ -20,18 +22,16 @@ def createAccount(request):
     elif request.method == 'POST':
         username = request.POST.get("username");
         password = request.POST.get("password");
-        name = request.POST.get("name");
-        phoneNum = request.POST.get("phoneNum");
-        birth = request.POST.get("birth");
-        email = request.POST.get("email");
-
+        first_name = request.POST.get("first_name")
+        last_name = request.POST.get("last_name")
+        email = request.POST.get("email")
         try:
-            User.objects.create_user(username, password, name, phoneNum, birth, email);
+            User.objects.create_user(username, email, password, first_name=first_name, last_name=last_name,);
             return redirect('login');
         except:
             msg = "<script>";
-            msg += "alert('같은 아이디가 존재합니다. 다시 가입하세요.');";
-            msg += "location.href='/account/register';";
+            msg += "alert('같은 아이디가 존재합니다. 다시 입력하세요.');";
+            msg += "location.href='/account/register/';";
             msg += "</script>";
             return HttpResponse(msg);
 
@@ -52,7 +52,7 @@ def myinfo(request):
                 name = request.POST.get('name');
                 phoneNum = request.POST.get('phoneNum');
                 birth = request.POST.get('birth');
-                email = request.POST.get("email");
+                email = request.POST.get('email');
 
                 if password != None :
                     userInfo.set_password(password)
@@ -66,21 +66,37 @@ def myinfo(request):
                 
                 msg = "<script>";
                 msg += "alert('회원정보 수정이 완료되었습니다. 다시 로그인 하세요.');";
-                msg += "location.href='homepage/login';";
+                msg += "location.href='account/login/';";
                 msg += "</script>";
                 return HttpResponse(msg);
             else:
                 msg = "<script>";
-                msg += "alert('비밀번호가 틀려 회원정보를 수정 할 수 없습니다.');";
-                msg += "location.href='homepage/login';";
+                msg += "alert('비밀번호가 틀렸습니다.');";
+                msg += "location.href='account/login/';";
                 msg += "</script>";
                 return HttpResponse(msg);
     else:
         msg = "<script>";
-        msg += "alert('로그인이 되어 있지 않습니다. 로그인 후 사용하세요.');";
-        msg += "location.href='homepage/login';";
+        msg += "alert('로그인 후 사용하세요.');";
+        msg += "location.href='account/login/';";
         msg += "</script>";
         return HttpResponse(msg);
 
 def myinfoDel(request):
-    return render(request, 'homepage/myinfoDel');
+    return render(request, 'homepage/myinfoDel.html');
+
+def info(request):
+    return render(request, 'template/menu/info.html')
+
+def template(request):
+    return render(request, 'template/')
+
+def running(request):
+    return render(request, 'menu/running.html')
+
+def weight(request):
+    return render(request, 'menu/weight.html')
+
+def QnA(request):
+    return render(request, 'menu/QnA.html')
+
