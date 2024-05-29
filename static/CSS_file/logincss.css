@@ -1,13 +1,7 @@
 .navbar-brand {
     font-size: 50px;
   }
-  body {
-        font-family: Arial, sans-serif;
-        margin: 0;
-        padding: 0;
-        background-color: plum;
-        background-image: url('{% static "menu1/health.png" %}');
-    }
+
   .navbar ul, .navbar li {
     margin: 0;
     padding: 0;
@@ -46,7 +40,7 @@
   }
   @keyframes backgroundChange {
     0% { background-image: url('{% static "menu1/health1.png" %}'); }
-    50% { background-image: url('{% static "menu1/health2.png" %}'); }
+    50% { background-image: url('{% static "menu1/health1.png" %}'); }
     100% { background-image: url('{% static "menu1/health1.png" %}'); }
   }
 

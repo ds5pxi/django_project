@@ -2,23 +2,15 @@ from django.shortcuts import render, redirect, HttpResponse
 
 from django.conf import settings
 # Create your views here.
-def info(request):
-    return render(request,'menu/info.html')
 
-def running(request):
-    return render(request, 'menu/running.html')
+def index(request):
+    return render(request, 'runningtip/index.html')
 
-def weight(request):
-    return render(request, 'menu/weight.html')
+def edit(request):
+    return render(request, 'runningtip/edit.html')
 
-def QnA(request):
-    return render(request, 'menu/QnA.html')
+def views(request):
+    return render(request, 'runningtip/views.html')
 
-def runningtip(request):
-    return render(request, 'menu/runningtip.html')
-
-def weighttip(request):
-    return render(request, 'menu/weighttip.html')
-
-def add(request):
-    return render(request, 'menu/add.html')
+def write(request):
+    return render(request, 'runningtip/write.html')
