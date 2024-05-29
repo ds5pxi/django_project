@@ -9,4 +9,5 @@ urlpatterns= [
     path('QnA/', views.QnA),
     path('runningtip/', views.runningtip),
     path('weighttip/', views.weighttip),
+    path('add/', views.add),
 ]

@@ -19,3 +19,6 @@ def runningtip(request):
 
 def weighttip(request):
     return render(request, 'menu/weighttip.html')
+
+def add(request):
+    return render(request, 'menu/add.html')
