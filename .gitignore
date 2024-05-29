@@ -1,4 +1,5 @@
 db.sqlite3
+<<<<<<< HEAD
 menu1/__pycache__/__init__.cpython-312.pyc
 menu1/__pycache__/__init__.cpython-312.pyc
 menu1/__pycache__/__init__.cpython-312.pyc
@@ -24,3 +25,7 @@ myweb/__pycache__/urls.cpython-312.pyc
 myweb/__pycache__/views.cpython-312.pyc
 myweb/__pycache__/wsgi.cpython-312.pyc
 menu2/__pycache__/urls.cpython-312.pyc
+=======
+menu1/__pycache__/urls.cpython-312.pyc
+menu1/__pycache__/views.cpython-312.pyc
+>>>>>>> ed7148b8902cf58c59f982486568e102b86537fd
