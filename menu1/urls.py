@@ -9,8 +9,5 @@ urlpatterns= [
     path('QnA/', views.QnA),
     path('runningtip/', views.runningtip),
     path('weighttip/', views.weighttip),
-<<<<<<< HEAD
-=======
     path('add/', views.add),
->>>>>>> 213df837d579e2fc442549fa274e1799ed10db8e
 ]

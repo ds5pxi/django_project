@@ -10,7 +10,24 @@ def index(request):
     return render(request, 'home.html')
 
 def login(request) :
-    return render(request, 'homepage/login.html');
+    if request.method == 'GET':
+        return render(request, 'homepage/login.html');
+    elif request.method == 'POST':
+        username = request.POST['username'];
+        password = request.POST['password'];
+    
+        user = auth.authenticate(request, 아이디=username, 비밀번호=password);
+    
+        if user is not None :
+            auth.login(request, user)
+            return redirect("/");
+        else :
+            msg = "<script>";
+            msg += "alert('잘못된 계정,패스워드 입니다. 다시 로그인 하세요.');";
+            msg += "location.href='/';";
+            msg += "</script>";
+            return HttpResponse(msg);
+    
 
 def logout(request) :
     auth.logout(request)
