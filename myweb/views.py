@@ -1,4 +1,4 @@
-
+# Create your views here.
 from django.shortcuts import render, redirect, HttpResponse
 from django.http import HttpResponse
 from django.contrib import auth
@@ -13,7 +13,7 @@ def login(request) :
     return render(request, 'homepage/login.html');
 
 def logout(request) :
-    auth.logout(request);
+    auth.logout(request)
     return render(request, 'homepage/logged_out.html');
 
 def createAccount(request):
@@ -111,4 +111,10 @@ def weight(request):
 
 def QnA(request):
     return render(request, 'menu/QnA.html')
+
+def runningtip(request):
+    return render(request, 'menu/runningtip.html')
+
+def weighttip(request):
+    return render(request, 'menu/weighttip.html')
 

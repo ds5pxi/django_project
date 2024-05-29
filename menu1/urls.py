@@ -7,5 +7,6 @@ urlpatterns= [
     path('running/', views.running),
     path('weight/', views.weight),
     path('QnA/', views.QnA),
-    
+    path('runningtip/', views.runningtip),
+    path('weighttip/', views.weighttip),
 ]
