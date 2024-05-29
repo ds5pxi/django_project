@@ -27,5 +27,5 @@ urlpatterns = [
     path('account/myinfo/', views.myinfo),
     path('account/myinfoDel/', views.myinfoDel),
     path('menu/', include('menu1.urls')),
-    path('menu2/', include('menu2.urls')),
+    path('runningtip/', include('menu1.urls')),
 ]

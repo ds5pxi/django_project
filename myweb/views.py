@@ -114,24 +114,21 @@ def myinfoDel(request):
     msg += "</script>";
     return HttpResponse(msg);
 
-def info(request):
-    return render(request, 'template/menu/info.html')
 
 def template(request):
     return render(request, 'template/')
 
-def running(request):
-    return render(request, 'menu/running.html')
 
-def weight(request):
-    return render(request, 'menu/weight.html')
+def index(request):
+    return render(request, 'menu/index.html')
 
-def QnA(request):
-    return render(request, 'menu/QnA.html')
+def edit(request):
+    return render(request, 'menu/edit.html')
 
-def runningtip(request):
-    return render(request, 'menu/runningtip.html')
+def write(request):
+    return render(request, 'menu/write.html')
 
-def weighttip(request):
-    return render(request, 'menu/weighttip.html')
+def views(request):
+    return render(request, 'menu/views.html')
+
 

@@ -8,6 +8,16 @@ menu1/__pycache__/apps.cpython-312.pyc
 menu1/__pycache__/models.cpython-312.pyc
 menu1/__pycache__/urls.cpython-312.pyc
 menu1/__pycache__/views.cpython-312.pyc
+<<<<<<< HEAD
+menu1/__pycache__/urls.cpython-312.pyc
+menu1/__pycache__/views.cpython-312.pyc
+menu1/__pycache__/urls.cpython-312.pyc
+menu1/__pycache__/views.cpython-312.pyc
+menu1/urls.py
+.gitignore
+menu1/urls.py
+menu1/views.py
+=======
 menu1/migrations/__pycache__/__init__.cpython-312.pyc
 menu1/migrations/__pycache__/0001_initial.cpython-312.pyc
 menu1/migrations/__pycache__/0002_delete_qna_delete_reply.cpython-312.pyc
@@ -29,3 +39,4 @@ menu2/__pycache__/urls.cpython-312.pyc
 menu1/__pycache__/urls.cpython-312.pyc
 menu1/__pycache__/views.cpython-312.pyc
 >>>>>>> ed7148b8902cf58c59f982486568e102b86537fd
+>>>>>>> 4014ccf6b7aae8653c021732c6b6116a4ce109af
